@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+// Pre-formatter links
+@mixin a-no-underline-hover-bold() {
+  a {
+    font-weight: normal;
+    text-decoration: none;
+    color: unset;
+
+    &:hover {
+      font-weight: bold;
+    }
+
+    &:visited {
+      color: unset;
+    }
+  }
+}

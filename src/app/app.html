@@ -1,1 +1,37 @@
-<mat-slide-toggle>Toggle me!</mat-slide-toggle>
+<main>
+  <header>
+    <mat-toolbar>
+      <div>
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+      </div>
+      <nav>
+        <ul>
+          <li><a mat-button href="/">Home</a></li>
+          <li><a mat-button href="/contact">Contact</a></li>
+          <li><a mat-button href="/info">Info</a></li>
+        </ul>
+      </nav>
+      <app-theme-component></app-theme-component>
+    </mat-toolbar>
+  </header>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="'over'" fixedTopGap="56">
+      <ul>
+        <li>
+          <a mat-button href="/"><mat-icon>home</mat-icon>Home</a>
+        </li>
+        <li>
+          <a mat-button href="/contacto"><mat-icon>alternate_email</mat-icon>Contact</a>
+        </li>
+        <li>
+          <a mat-button href="/informacion"><mat-icon>info</mat-icon>Info</a>
+        </li>
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav-content> </mat-sidenav-content>
+  </mat-sidenav-container>
+  <footer></footer>
+</main>

@@ -26,7 +26,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["src/styles.scss", "src/app/shared/styles/material-theme.scss"]
           },
           "configurations": {
             "production": {
