@@ -1,4 +1,4 @@
-<header>
+<header class="app-header">
   <mat-toolbar>
     <!-- Menu -->
     <div>
@@ -6,21 +6,26 @@
         <mat-icon>menu</mat-icon>
       </button>
     </div>
-    <!-- TODO: Logo -->
-    <div></div>
-    <!-- TODO: Search -->
-    <div>
-      <input matInput placeholder="Search" />
+    <!-- Logo -->
+    <div class="app-header__logo">
+      <a href="/">
+        <img src="assets/logos/angular_gradient.png" alt="Logo Angular" />
+      </a>
+    </div>
+    <!-- Search -->
+    <div class="app-header__search">
+      <input name="search" placeholder="Search" />
+      <mat-icon>search</mat-icon>
     </div>
     <!-- Theme -->
     <app-theme-component></app-theme-component>
-    <!-- TODO: User -->
+    <!-- User -->
     <div>
       <button mat-icon-button>
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
-    <!-- TODO: Cart -->
+    <!-- Cart -->
     <div>
       <button mat-icon-button>
         <mat-icon matBadge="0">shopping_cart</mat-icon>

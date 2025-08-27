@@ -1,20 +1,47 @@
 @use '../../styles/mixins' as mixins;
+.app-header {
+  .mat-toolbar {
+    justify-content: space-between;
 
-.mat-toolbar {
-  justify-content: space-between;
+    div {
+      display: flex;
+      align-items: center;
+    }
 
-  div {
-    display: flex;
-    align-items: center;
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li {
+        padding-left: 1rem;
+        @include mixins.a-no-underline-hover-bold();
+      }
+    }
   }
 
-  nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    li {
-      padding-left: 1rem;
-      @include mixins.a-no-underline-hover-bold();
+  &__logo {
+    img {
+      height: 2.2rem;
+      vertical-align: middle;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    margin: 0 0.2rem;
+
+    input {
+      flex: 1;
+      padding-left: 0.4rem;
+      padding-right: 1.6rem;
+      height: 1.5rem;
+      color: var(--mat-sys-on-surface);
+      border: 1px solid var(--mat-sys-on-primary-container);
+      border-radius: var(--mat-sys-corner-extra-small);
+    }
+
+    mat-icon {
+      margin-left: -1.6rem;
     }
   }
 }
