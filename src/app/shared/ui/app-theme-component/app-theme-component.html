@@ -1,0 +1,27 @@
+<div class="app-theme">
+  <button matIconButton [mat-menu-trigger-for]="themeMenu">
+    <mat-icon>
+      @switch (theme()) { @case ('light') {
+      {{ 'light_mode' }}
+      } @case ('dark') {
+      {{ 'dark_mode' }}
+      } @case ('auto') {
+      {{ 'desktop_windows' }}
+      } }
+    </mat-icon>
+  </button>
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item (click)="setTheme('auto')" aria-label="Set default system theme">
+      <mat-icon>desktop_windows</mat-icon>
+      <span>System</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('dark')" aria-label="Set dark theme">
+      <mat-icon>dark_mode</mat-icon>
+      <span>Dark</span>
+    </button>
+    <button mat-menu-item (click)="setTheme('light')" aria-label="Set light theme">
+      <mat-icon>light_mode</mat-icon>
+      <span>Light</span>
+    </button>
+  </mat-menu>
+</div>
