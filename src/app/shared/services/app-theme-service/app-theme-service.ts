@@ -1,5 +1,4 @@
-import { isPlatformBrowser } from '@angular/common';
-import { DOCUMENT, inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
+import { DOCUMENT, inject, Injectable, signal } from '@angular/core';
 import { Subject } from 'rxjs';
 import { LOCAL_STORAGE } from '../../providers/local-storage';
 
@@ -16,17 +15,12 @@ export type Theme = 'dark' | 'light' | 'auto';
 export class AppThemeService {
   private readonly document = inject(DOCUMENT);
   private readonly localStorage = inject(LOCAL_STORAGE);
-  private readonly platformId = inject(PLATFORM_ID);
 
   readonly theme = signal<Theme | null>(this.getThemeFromLocalStorageValue());
   // Zoneless - it's required to notify that theme was changed. It could be removed when signal-based components will be available.
   readonly themeChanged$ = new Subject<void>();
 
   constructor() {
-    if (!isPlatformBrowser(this.platformId)) {
-      return;
-    }
-
     this.loadThemePreference();
     this.watchPreferredColorScheme();
   }
