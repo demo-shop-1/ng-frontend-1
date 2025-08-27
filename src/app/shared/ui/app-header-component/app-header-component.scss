@@ -20,9 +20,14 @@
   }
 
   &__logo {
-    img {
+    a {
+      width: 2.2rem;
       height: 2.2rem;
+      position: relative;
+    }
+    img {
       vertical-align: middle;
+      object-fit: contain;
     }
   }
 
