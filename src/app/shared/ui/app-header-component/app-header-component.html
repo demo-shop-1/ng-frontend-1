@@ -1,0 +1,76 @@
+<header class="app-header">
+  <mat-toolbar>
+    <div>
+      <!-- Menu -->
+      <div [style.order]="isWebPortrait() ? 2 : 1">
+        @if(isWebPortrait()){
+        <button matButton>
+          <mat-icon>menu</mat-icon>
+          All categories
+        </button>
+        } @else{
+        <button matIconButton>
+          <mat-icon>menu</mat-icon>
+        </button>
+        }
+      </div>
+      <!-- Logo -->
+      <div class="app-header__logo" [style.order]="isWebPortrait() ? 1 : 2">
+        <a href="/" [class.is-web]="isWebPortrait()">
+          @if(isWebPortrait()){
+          <img
+            fill
+            ngSrc="assets/logos/angular_wordmark_gradient.png"
+            decoding="async"
+            priority
+            alt="Logo Angular Web"
+          />
+          } @else {
+          <img
+            fill
+            ngSrc="assets/logos/angular_gradient.png"
+            decoding="async"
+            priority
+            alt="Logo Angular Mobile"
+          />
+          }
+        </a>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="app-header__search">
+      <input name="search" placeholder="Search" />
+      <mat-icon>search</mat-icon>
+    </div>
+    <!-- Theme -->
+    <app-theme-component></app-theme-component>
+    <!-- User -->
+    <div>
+      @if(isWebPortrait()){
+      <button matButton>
+        <mat-icon>account_circle</mat-icon>
+        My account
+      </button>
+      } @else {
+      <button matIconButton>
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      }
+    </div>
+    <!-- Cart -->
+    <div>
+      @if(isWebPortrait()){
+      <button matButton>
+        <mat-icon matBadge="0" aria-hidden="false">shopping_cart</mat-icon>
+        My cart
+      </button>
+      } @else {
+      <button matIconButton>
+        <mat-icon matBadge="0" aria-hidden="false">shopping_cart</mat-icon>
+      </button>
+      }
+    </div>
+  </mat-toolbar>
+</header>
+<mat-divider></mat-divider>

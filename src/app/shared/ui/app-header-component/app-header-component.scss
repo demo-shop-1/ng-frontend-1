@@ -1,0 +1,57 @@
+@use '../../styles/mixins' as mixins;
+.app-header {
+  max-width: var(--layout-grid-width);
+  margin: 0 auto;
+  .mat-toolbar {
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      li {
+        padding-left: 1rem;
+        @include mixins.a-no-underline-hover-bold();
+      }
+    }
+  }
+
+  &__logo {
+    a {
+      width: 2.2rem;
+      height: 2.2rem;
+      position: relative;
+      &.is-web {
+        width: 8rem;
+      }
+    }
+    img {
+      vertical-align: middle;
+      object-fit: contain;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    margin: 0 0.2rem;
+
+    input {
+      flex: 1;
+      padding-left: 0.4rem;
+      padding-right: 1.6rem;
+      height: 1.5rem;
+      color: var(--mat-sys-on-surface);
+      border: 1px solid var(--mat-sys-on-primary-container);
+      border-radius: var(--mat-sys-corner-extra-small);
+    }
+
+    mat-icon {
+      margin-left: -1.6rem;
+    }
+  }
+}

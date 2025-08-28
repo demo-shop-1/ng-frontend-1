@@ -1,23 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { AppThemeComponent } from './shared/ui/app-theme-component/app-theme-component';
+import { AppHeaderComponent } from './shared/ui/app-header-component';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    MatToolbarModule,
-    MatIconModule,
-    MatSlideToggleModule,
-    MatSidenavModule,
-    MatDividerModule,
-    MatButtonModule,
-    AppThemeComponent,
-  ],
+  imports: [MatIconModule, MatSidenavModule, MatButtonModule, AppHeaderComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
