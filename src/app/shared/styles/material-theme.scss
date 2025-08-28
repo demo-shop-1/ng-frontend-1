@@ -20,3 +20,12 @@ body {
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 }
+
+.mat-menu__item--selected {
+  @include mat.menu-overrides(
+    (
+      item-icon-color: var(--mat-sys-primary),
+      item-label-text-color: var(--mat-sys-primary),
+    )
+  );
+}

@@ -7,12 +7,15 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { TranslatePipe } from '@ngx-translate/core';
+import { AppLanguageComponent } from '../app-language-component';
 import { AppThemeComponent } from '../app-theme-component';
 
 @UntilDestroy()
 @Component({
   selector: 'app-header-component',
   imports: [
+    TranslatePipe,
     NgOptimizedImage,
     MatBadgeModule,
     MatToolbarModule,
@@ -20,6 +23,7 @@ import { AppThemeComponent } from '../app-theme-component';
     MatButtonModule,
     MatDividerModule,
     AppThemeComponent,
+    AppLanguageComponent,
   ],
   templateUrl: './app-header-component.html',
   styleUrl: './app-header-component.scss',
