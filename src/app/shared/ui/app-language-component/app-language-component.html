@@ -1,0 +1,29 @@
+<div class="app-language">
+  <button
+    matIconButton
+    matTooltip="{{ 'language.tooltip' | translate }}"
+    [mat-menu-trigger-for]="themeMenu"
+  >
+    <mat-icon [svgIcon]="languageFlag()"></mat-icon>
+    <mat-menu #themeMenu="matMenu">
+      <button
+        [class.mat-menu__item--selected]="language() === 'es'"
+        (click)="setLanguage('es')"
+        mat-menu-item
+        aria-label="Set spanish language"
+      >
+        <mat-icon svgIcon="spain-flag"></mat-icon>
+        <span>{{ 'language.spanish' | translate }}</span>
+      </button>
+      <button
+        [class.mat-menu__item--selected]="language() === 'en'"
+        (click)="setLanguage('en')"
+        mat-menu-item
+        aria-label="Set english language"
+      >
+        <mat-icon svgIcon="usa-flag"></mat-icon>
+        <span>{{ 'language.english' | translate }}</span>
+      </button>
+    </mat-menu>
+  </button>
+</div>

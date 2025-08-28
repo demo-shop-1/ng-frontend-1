@@ -6,7 +6,7 @@
         @if(isWebPortrait()){
         <button matButton>
           <mat-icon>menu</mat-icon>
-          All categories
+          {{ 'header.all-categories' | translate }}
         </button>
         } @else{
         <button matIconButton>
@@ -45,12 +45,14 @@
     </div>
     <!-- Theme -->
     <app-theme-component></app-theme-component>
+    <!-- Language -->
+    <app-language-component></app-language-component>
     <!-- User -->
     <div>
       @if(isWebPortrait()){
       <button matButton>
         <mat-icon>account_circle</mat-icon>
-        My account
+        {{ 'header.my-account' | translate }}
       </button>
       } @else {
       <button matIconButton>
@@ -62,8 +64,8 @@
     <div>
       @if(isWebPortrait()){
       <button matButton>
-        <mat-icon matBadge="0" aria-hidden="false">shopping_cart</mat-icon>
-        My cart
+        <mat-icon matBadge="0" matBadgeSize="small" aria-hidden="false">shopping_cart</mat-icon>
+        {{ 'header.my-cart' | translate }}
       </button>
       } @else {
       <button matIconButton>

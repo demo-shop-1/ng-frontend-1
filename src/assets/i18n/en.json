@@ -1,0 +1,18 @@
+{
+  "header": {
+    "all-categories": "All categories",
+    "my-account": "My account",
+    "my-cart": "My cart"
+  },
+  "theme": {
+    "system": "System",
+    "dark": "Dark",
+    "light": "Light",
+    "tooltip": "Select a theme for the web"
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Spanish",
+    "tooltip": "Select a language for the web"
+  }
+}

@@ -1,5 +1,9 @@
 <div class="app-theme">
-  <button matIconButton matTooltip="Select a theme for the web" [mat-menu-trigger-for]="themeMenu">
+  <button
+    matIconButton
+    matTooltip="{{ 'theme.tooltip' | translate }}"
+    [mat-menu-trigger-for]="themeMenu"
+  >
     <mat-icon>
       @switch (theme()) { @case ('light') {
       {{ 'light_mode' }}
@@ -11,17 +15,32 @@
     </mat-icon>
   </button>
   <mat-menu #themeMenu="matMenu">
-    <button mat-menu-item (click)="setTheme('auto')" aria-label="Set default system theme">
+    <button
+      [class.mat-menu__item--selected]="theme() === 'auto'"
+      mat-menu-item
+      (click)="setTheme('auto')"
+      aria-label="Set default system theme"
+    >
       <mat-icon>desktop_windows</mat-icon>
-      <span>System</span>
+      <span>{{ 'theme.system' | translate }}</span>
     </button>
-    <button mat-menu-item (click)="setTheme('dark')" aria-label="Set dark theme">
+    <button
+      [class.mat-menu__item--selected]="theme() === 'dark'"
+      mat-menu-item
+      (click)="setTheme('dark')"
+      aria-label="Set dark theme"
+    >
       <mat-icon>dark_mode</mat-icon>
-      <span>Dark</span>
+      <span>{{ 'theme.dark' | translate }}</span>
     </button>
-    <button mat-menu-item (click)="setTheme('light')" aria-label="Set light theme">
+    <button
+      [class.mat-menu__item--selected]="theme() === 'light'"
+      mat-menu-item
+      (click)="setTheme('light')"
+      aria-label="Set light theme"
+    >
       <mat-icon>light_mode</mat-icon>
-      <span>Light</span>
+      <span>{{ 'theme.light' | translate }}</span>
     </button>
   </mat-menu>
 </div>
