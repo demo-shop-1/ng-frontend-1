@@ -24,6 +24,9 @@
       width: 2.2rem;
       height: 2.2rem;
       position: relative;
+      &.is-web {
+        width: 8rem;
+      }
     }
     img {
       vertical-align: middle;

@@ -1,5 +1,5 @@
 <div class="app-theme">
-  <button matIconButton [mat-menu-trigger-for]="themeMenu">
+  <button matIconButton matTooltip="Select a theme for the web" [mat-menu-trigger-for]="themeMenu">
     <mat-icon>
       @switch (theme()) { @case ('light') {
       {{ 'light_mode' }}
