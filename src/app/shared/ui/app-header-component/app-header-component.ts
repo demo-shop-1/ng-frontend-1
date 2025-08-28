@@ -3,6 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
@@ -17,6 +18,7 @@ import { AppThemeComponent } from '../app-theme-component';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatDividerModule,
     AppThemeComponent,
   ],
   templateUrl: './app-header-component.html',
