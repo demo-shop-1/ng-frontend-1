@@ -19,5 +19,12 @@
     "subtitle": "We are searching for your page",
     "content": "But we can not find it",
     "button": "Go home"
+  },
+  "menu": {
+    "title": "Categories",
+    "book": "Books",
+    "mugs": "Coffee Mugs",
+    "pads": "Mouse Pads",
+    "tags": "Luggage Tags"
   }
 }

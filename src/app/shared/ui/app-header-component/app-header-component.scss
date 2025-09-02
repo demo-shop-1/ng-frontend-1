@@ -1,7 +1,11 @@
 @use '../../styles/mixins' as mixins;
 .app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
   max-width: var(--layout-grid-width);
-  margin: 0 auto;
   .mat-toolbar {
     justify-content: space-between;
 
