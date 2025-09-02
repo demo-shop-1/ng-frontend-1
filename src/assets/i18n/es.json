@@ -19,5 +19,12 @@
     "subtitle": "Estamos buscando tu página",
     "content": "Pero no lo hemos podido encontrar",
     "button": "Volver al inicio"
+  },
+  "menu": {
+    "title": "Categorías",
+    "book": "Libros",
+    "mugs": "Tazas de café",
+    "pads": "Alfombrillas para ratón",
+    "tags": "Etiquetas para equipaje"
   }
 }

@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+  <mat-sidenav
+    (closedStart)="store.openSidenav(false)"
+    [opened]="store.showSidenav()"
+    #sidenav
+    [mode]="'over'"
+    fixedTopGap="56"
+  >
+    <h2>{{ 'menu.title' | translate }}</h2>
+    <ul>
+      @for (category of store.categories(); track category.id) {
+      <li>
+        <a mat-button [href]="category.url">
+          <mat-icon>{{ category.icon }}</mat-icon>
+          {{ category.translateKey | translate }}
+        </a>
+      </li>
+      }
+    </ul>
+  </mat-sidenav>
+</mat-sidenav-container>

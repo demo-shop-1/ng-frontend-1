@@ -4,12 +4,12 @@
       <!-- Menu -->
       <div [style.order]="isWebPortrait() ? 2 : 1">
         @if(isWebPortrait()){
-        <button matButton>
+        <button matButton (click)="opeMenu()">
           <mat-icon>menu</mat-icon>
           {{ 'header.all-categories' | translate }}
         </button>
         } @else{
-        <button matIconButton>
+        <button matIconButton (click)="opeMenu()">
           <mat-icon>menu</mat-icon>
         </button>
         }
@@ -74,5 +74,5 @@
       }
     </div>
   </mat-toolbar>
+  <mat-divider></mat-divider>
 </header>
-<mat-divider></mat-divider>
