@@ -14,5 +14,10 @@
     "english": "Inglés",
     "spanish": "Español",
     "tooltip": "Seleccione un idioma para la web"
+  },
+  "not-found": {
+    "subtitle": "Estamos buscando tu página",
+    "content": "Pero no lo hemos podido encontrar",
+    "button": "Volver al inicio"
   }
 }
