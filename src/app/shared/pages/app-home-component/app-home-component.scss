@@ -10,4 +10,14 @@
       flex-direction: row;
     }
   }
+
+  &__products {
+    padding: 0 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 260px;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+  }
 }

@@ -16,7 +16,7 @@ export class CategoryQueryApplication implements CategoryQueryService {
       map((categories) => {
         const activeCategories = categories.filter((c) => c.isActive);
         activeCategories.forEach((c) => {
-          // Set url, icon, translate key
+          // Set url, icon, translate key, image
           if (c.id === CategoryMenuEnum.BOOKS.id) {
             c.icon = CategoryMenuEnum.BOOKS.icon;
             c.urlRouter = CategoryMenuEnum.BOOKS.url;

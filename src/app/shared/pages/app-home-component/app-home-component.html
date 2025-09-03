@@ -15,4 +15,14 @@
     }
   </div>
   <app-span-component title="{{ 'home.top-1' | translate }}"> </app-span-component>
+  <!-- Products -->
+  <div class="app-home__products">
+    @for (product of topProducts(); track product.sku) {
+    <app-card-large-component
+      [image]="product.imageUrl"
+      [description]="product.description"
+      [firstAction]="product.unitPrice?.toString()"
+    ></app-card-large-component>
+    }
+  </div>
 </app-menu-component>

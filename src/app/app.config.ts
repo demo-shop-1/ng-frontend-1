@@ -1,5 +1,6 @@
 import {
   ApplicationConfig,
+  DEFAULT_CURRENCY_CODE,
   provideBrowserGlobalErrorListeners,
   provideZonelessChangeDetection,
 } from '@angular/core';
@@ -26,5 +27,9 @@ export const appConfig: ApplicationConfig = {
       fallbackLang: 'en',
     }),
     AppStore,
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'EUR',
+    },
   ],
 };
