@@ -8,10 +8,10 @@
   <!-- Categories -->
   <div class="app-home__categories" [class.is-web]="store.isWeb()">
     @for (category of store.categories(); track category.id) {
-    <app-card-component
+    <app-card-small-component
       title="{{ category.translateKey | translate }}"
       [image]="category.image"
-    ></app-card-component>
+    ></app-card-small-component>
     }
   </div>
   <app-span-component title="{{ 'home.top-1' | translate }}"> </app-span-component>
