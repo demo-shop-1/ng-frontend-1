@@ -13,7 +13,8 @@ export class CategoryMapper {
         lastUpdated: null,
         icon: null,
         translateKey: null,
-        url: null,
+        urlRouter: null,
+        image: null,
       })
     );
   }

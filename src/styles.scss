@@ -2,7 +2,8 @@
 :root {
   --layout-grid-width: 101.5rem;
   --layout-grid-columns: 12;
-  --layout-header-height: 57px;
+  --layout-header-mobile-height: 57px;
+  --layout-header-web-height: 65px;
 }
 html,
 body {
@@ -21,4 +22,13 @@ body {
   body {
     height: 100svh;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }

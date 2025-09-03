@@ -1,3 +1,18 @@
 <app-header-component></app-header-component>
-<app-menu-component></app-menu-component>
-<footer></footer>
+<app-menu-component>
+  <app-span-component
+    title="{{ 'home.experts-1' | translate }}"
+    subtitle="{{ 'home.experts-2' | translate }}"
+  >
+  </app-span-component>
+  <!-- Categories -->
+  <div class="app-home__categories" [class.is-web]="store.isWeb()">
+    @for (category of store.categories(); track category.id) {
+    <app-card-component
+      title="{{ category.translateKey | translate }}"
+      [image]="category.image"
+    ></app-card-component>
+    }
+  </div>
+  <app-span-component title="{{ 'home.top-1' | translate }}"> </app-span-component>
+</app-menu-component>

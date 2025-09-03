@@ -19,23 +19,27 @@ export class CategoryQueryApplication implements CategoryQueryService {
           // Set url, icon, translate key
           if (c.id === CategoryMenuEnum.BOOKS.id) {
             c.icon = CategoryMenuEnum.BOOKS.icon;
-            c.url = CategoryMenuEnum.BOOKS.url;
+            c.urlRouter = CategoryMenuEnum.BOOKS.url;
             c.translateKey = CategoryMenuEnum.BOOKS.translateKey;
+            c.image = CategoryMenuEnum.BOOKS.image;
           }
           if (c.id === CategoryMenuEnum.MUGS.id) {
             c.icon = CategoryMenuEnum.MUGS.icon;
-            c.url = CategoryMenuEnum.MUGS.url;
+            c.urlRouter = CategoryMenuEnum.MUGS.url;
             c.translateKey = CategoryMenuEnum.MUGS.translateKey;
+            c.image = CategoryMenuEnum.MUGS.image;
           }
           if (c.id === CategoryMenuEnum.PADS.id) {
             c.icon = CategoryMenuEnum.PADS.icon;
-            c.url = CategoryMenuEnum.PADS.url;
+            c.urlRouter = CategoryMenuEnum.PADS.url;
             c.translateKey = CategoryMenuEnum.PADS.translateKey;
+            c.image = CategoryMenuEnum.PADS.image;
           }
           if (c.id === CategoryMenuEnum.TAGS.id) {
             c.icon = CategoryMenuEnum.TAGS.icon;
-            c.url = CategoryMenuEnum.TAGS.url;
+            c.urlRouter = CategoryMenuEnum.TAGS.url;
             c.translateKey = CategoryMenuEnum.TAGS.translateKey;
+            c.image = CategoryMenuEnum.TAGS.image;
           }
         });
 

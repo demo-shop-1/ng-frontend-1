@@ -2,8 +2,8 @@
   <mat-toolbar>
     <div>
       <!-- Menu -->
-      <div [style.order]="isWebPortrait() ? 2 : 1">
-        @if(isWebPortrait()){
+      <div [style.order]="store.isWeb() ? 2 : 1">
+        @if(store.isWeb()){
         <button matButton (click)="opeMenu()">
           <mat-icon>menu</mat-icon>
           {{ 'header.all-categories' | translate }}
@@ -15,9 +15,9 @@
         }
       </div>
       <!-- Logo -->
-      <div class="app-header__logo" [style.order]="isWebPortrait() ? 1 : 2">
-        <a href="/" [class.is-web]="isWebPortrait()">
-          @if(isWebPortrait()){
+      <div class="app-header__logo" [style.order]="store.isWeb() ? 1 : 2">
+        <a href="/" [class.is-web]="store.isWeb()">
+          @if(store.isWeb()){
           <img
             fill
             ngSrc="assets/logos/angular_wordmark_gradient.png"
@@ -49,7 +49,7 @@
     <app-language-component></app-language-component>
     <!-- User -->
     <div>
-      @if(isWebPortrait()){
+      @if(store.isWeb()){
       <button matButton>
         <mat-icon>account_circle</mat-icon>
         {{ 'header.my-account' | translate }}
@@ -62,7 +62,7 @@
     </div>
     <!-- Cart -->
     <div>
-      @if(isWebPortrait()){
+      @if(store.isWeb()){
       <button matButton>
         <mat-icon matBadge="0" matBadgeSize="small" aria-hidden="false">shopping_cart</mat-icon>
         {{ 'header.my-cart' | translate }}

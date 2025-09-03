@@ -5,7 +5,9 @@
   left: 0;
   right: 0;
   z-index: 2;
+  margin: auto;
   max-width: var(--layout-grid-width);
+
   .mat-toolbar {
     justify-content: space-between;
 

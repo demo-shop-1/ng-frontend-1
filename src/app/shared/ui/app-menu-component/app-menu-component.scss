@@ -2,8 +2,17 @@
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
-  margin-top: var(--layout-header-height);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: var(--layout-grid-width);
+  margin-top: var(--layout-header-mobile-height);
+
+  &.is-web {
+    margin-top: var(--layout-header-web-height);
+  }
+
   h2 {
+    padding-top: 1rem;
     padding-inline-start: 1.8rem;
   }
   ul {

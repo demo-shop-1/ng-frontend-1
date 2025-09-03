@@ -26,5 +26,10 @@
     "mugs": "Tazas de café",
     "pads": "Alfombrillas para ratón",
     "tags": "Etiquetas para equipaje"
+  },
+  "home": {
+    "experts-1": "Expertos en tecnología",
+    "experts-2": "con un servicio 5 estrellas",
+    "top-1": "¡Consigue las ofertas más TOP del momento!"
   }
 }

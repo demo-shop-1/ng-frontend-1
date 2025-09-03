@@ -7,5 +7,6 @@ export class CategoryModel {
   lastUpdated!: Date | null;
   icon!: string | null;
   translateKey!: string | null;
-  url!: string | null;
+  urlRouter!: string | null;
+  image!: string | null;
 }

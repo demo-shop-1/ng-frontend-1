@@ -1,10 +1,10 @@
-<mat-sidenav-container>
+<mat-sidenav-container [class.is-web]="store.isWeb()">
   <mat-sidenav
     (closedStart)="store.openSidenav(false)"
     [opened]="store.showSidenav()"
     #sidenav
     [mode]="'over'"
-    fixedTopGap="56"
+    fixedTopGap="57"
   >
     <h2>{{ 'menu.title' | translate }}</h2>
     <ul>
@@ -16,6 +16,15 @@
         </a>
       </li>
       }
+      <li>
+        <a mat-button href="/">
+          <mat-icon>books</mat-icon>
+          Books
+        </a>
+      </li>
     </ul>
   </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content />
+  </mat-sidenav-content>
 </mat-sidenav-container>

@@ -1,0 +1,18 @@
+.mat-mdc-card-outlined {
+  flex: 1 1 300px;
+  min-width: 220px;
+
+  .mat-mdc-card-title-group {
+    flex-direction: row-reverse;
+    align-items: anchor-center;
+    justify-content: flex-end;
+
+    .mdc-card__media {
+      margin-right: 1rem;
+    }
+  }
+}
+
+:host {
+  display: flex;
+}
